@@ -13,8 +13,7 @@ class MonthInfoController extends BaseController {
 	}
 
 	public function index() 
-	{
-		
+	{ 
 	}
 
 	public function create()

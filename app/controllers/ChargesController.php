@@ -18,10 +18,10 @@ class ChargesController extends BaseController {
 	protected $chargeRepo;
 
 	public function __construct(CategoryInterface $catRepo,
-								PriorityInterface $Prepo,
-								FamilyMemberInterface $FMrepo, 
-								MonthInfoInterface $MIrepo, 
-								ChargeInterface $Crepo)
+						PriorityInterface $Prepo,
+						FamilyMemberInterface $FMrepo, 
+						MonthInfoInterface $MIrepo, 
+						ChargeInterface $Crepo)
 	{
 		$this->categoryRepo = $catRepo;
 		$this->priorityRepo = $Prepo;
@@ -51,12 +51,13 @@ class ChargesController extends BaseController {
 		$possibleCharge = $currentMonthInfo->possible_charge;
 		$actualCharge = $currentMonthInfo->actual_charge;
  
-		return View::make('charges.index', compact(['charges', 
-													'priorities', 
-													'categories', 
-													'members', 
-													'possibleCharge', 
-													'actualCharge']));
+		return View::make('charges.index', 
+							compact(['charges', 
+									 'priorities', 
+									 'categories', 
+									 'members', 
+									 'possibleCharge', 
+									 'actualCharge']));
 	}
 
 	public function store()
